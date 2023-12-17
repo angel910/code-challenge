@@ -1,19 +1,17 @@
-const findSum = function (array) {
-    const findSum = function (array) {
-        let sum = 0;
+const findSum = function(array) {
+    let sum = 0;
 
-        for (const number of array) {
-            sum += number
-        }
-
-        return sum;
+    for (const number of array) {
+    sum += number        
     }
+
+    return sum;
 };
 
 const findFrequency = function (array) {
     let countObj = {};
     let scoreArr = [];
-    let frequency = [];
+    let frequency = {};
 
     array.forEach(string => {
         if (string in countObj) {
@@ -36,7 +34,7 @@ const findFrequency = function (array) {
 
     for (const score in countObj) {
         if (countObj[score] == highscore) {
-            frequency.push(`most: ${score}`)
+            frequency.most = score;
         } else {
             continue
         }
@@ -44,7 +42,7 @@ const findFrequency = function (array) {
 
     for (const score in countObj) {
         if (countObj[score] == lowScore) {
-            frequency.push(`least: ${score}`)
+            frequency.least = score;
         } else {
             continue
         }
